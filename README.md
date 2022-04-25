@@ -4,4 +4,4 @@ Simple wrapper for [axios](https://www.npmjs.com/package/axios) package.
 
 ## Installation
 
-`npm i github:Pashted/fetch-helper#master`
+`npm i github:Pashted/fetch-helper#v0.0.1`
