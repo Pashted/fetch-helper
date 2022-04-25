@@ -1,0 +1,24 @@
+{
+  "name": "fetch-helper",
+  "version": "0.0.1",
+  "description": "Simple wrapper for axios package",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "keywords": [
+    "axios",
+    "fetch",
+    "request"
+  ],
+  "author": "Pashted",
+  "homepage": "https://github.com/Pashted/fetch-helper/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Pashted/fetch-helper.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
