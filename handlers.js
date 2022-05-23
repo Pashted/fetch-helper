@@ -46,6 +46,7 @@ function handleError(err) {
         reason = err.reason
             || err.response?.data?.message
             || err.response?.data?.description
+            || err.response?.data?.error_description
             || err.response?.statusText
             || err.code;
 

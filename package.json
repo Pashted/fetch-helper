@@ -1,6 +1,6 @@
 {
   "name": "fetch-helper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple wrapper for axios package",
   "main": "index.js",
   "scripts": {
