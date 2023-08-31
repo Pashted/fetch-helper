@@ -8,6 +8,7 @@ function handleResponse(res) {
 
     if (res.config?.responseType === 'json' && typeof response !== 'object') {
         let err = new Error('Invalid JSON');
+        err.response = res;
 
         if (typeof response === 'string') {
             // Explain error with first and last letters of body response
