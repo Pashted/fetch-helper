@@ -7,17 +7,22 @@ const { handleResponse, handleError } = require("./handlers.js");
  * @param {string} url
  * @param {object} data
  * @param {object} headers
+ * @param {object} body
  * @param {number} timeout
  * @param {number} speed Requests per second. Required for some apis with limited payload.
  * @param {function} onSuccess Optional function to handle raw axios response
  * @param {function} onError Optional function to handle raw axios error
  * @returns {{html(): Promise<*>, json(): Promise<*>, binary(): Promise<*>}}
  */
-function _get(url, data, { headers = {}, timeout = 30000, speed, onSuccess = handleResponse, onError = handleError } = {}) {
+function _get(url, data, { headers = {}, body, timeout = 30000, speed, onSuccess = handleResponse, onError = handleError } = {}) {
     let config = { url, headers, timeout, method: 'GET' };
 
     if (typeof data === 'object' && Object.keys(data).length) {
         config.params = data;
+    }
+    if (typeof body === 'object' && Object.keys(body).length) {
+        config.data = body;
+        config.headers['Content-Type'] = 'application/json';
     }
 
     return {
